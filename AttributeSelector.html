@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Selector</title>
+  <style>
+
+/*WHEN YOU NEED TO ADD THE SYLE TO THE ATTRIBUTE*/
+    [href]{
+      color: deeppink;
+    }
+
+/*by using ^ = and "" athule mona hari word ekak type kaloth e wachana wlin nm ptn ganne ekata me style eka add wenoo*/
+
+[href^="https"]{
+  color: blue;
+}
+
+
+/*by using $= and " " athule mona hari word ekak type kaloth e wachana wlin nm iwara wenne ekata me style eka add wenoo*/
+[href$="uk"]{
+    color: mediumpurple;
+}
+
+/*by using *= and " " athule mona hari word ekak type kaloth e akuru link eka athule kohe hari tinoo nm  ekata me style eka add wenoo*/
+[href*="mell"]{
+    color: orange;
+}
+
+/*by using ~= and " " athule mona hari word ekak type kaloth e wachane link eka athule kohe hari tinoo nm  ekata me style eka add wenoo*/
+/*mekedi  akuru athara sapace tiyenna ona like "abc mel bc.lk"*/
+[href~="mel"]{
+    color:yellow;
+}
+
+
+/*h1 tag eke athule tina class ekekata hari id ekakata hari /*h1 tag eke athule tina class ekekata hari id ekakata hari  style eka apply karanna oni unama*/
+.my-institute[href]{
+    color: palegreen;
+}
+
+
+
+
+  </style>
+</head>
+
+
+<body>
+
+<h1>Attribute Selector</h1>
+
+<a href="www.google.com"> GOOGLE</a>
+
+
+<a href="www.ijse.lk"> IJSE</a> <br>
+
+<a href="www.ijse.lk"> IJSE2</a> <br>
+
+<a href="https.abc,com">Starts with HTTPS</a> <br>
+
+<a href="https.abc.uk">Ends with uk</a> <br>
+
+<a href="https.abmellc.uk">Have the letters mell in the middle</a> <br>
+
+<a href="https.ab mel lc.uk">Have the word  mel in the middle</a> <br>
+
+
+<h1 class="my-institute" href="https://www.ijse.ac.uk">Welcome to UoIJSE 1</h1>
+
+<h1 id="ijse" href="https://www.ijse.ac.uk">Welcome to UoIJSE 2</h1>
+
+<h1 class="my-institute" href="https://www.ijse.ac.uk">Welcome to UoIJSE 3</h1>
+
+<h1 href="https://www.bolton.ac.uk">Welcome to UoBolton</h1>
+
+<h1 class="my-institute">Hello GDSE</h1>
+
+
+
+</body>
+</html>
