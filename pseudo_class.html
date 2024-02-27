@@ -35,6 +35,42 @@ input:focus {
 background: dodgerblue;
 }
 
+
+/*mulu list ekatama style ekak dann aoni nm*/
+li{
+    color:red;
+}
+
+
+/*list eke mulinma inna ekkenata style eka add karanna oni unma*/
+li:first-child{
+    color: pink;
+}
+
+
+/*list eke last child ta style eka add karanna oni unama*/
+li:last-child{
+    color:orange;
+}
+
+
+/*This will work only if the list has only 1 component*/
+li:only-child{
+    color:pink;
+}
+
+
+/*First and last ekata arenna wena mona hari ekakkata daganna oni nm meka use karanna pukuwn*/
+li:nth-child(4){
+    color:purple;
+}
+
+
+/*mekedi caount eka ganne last ekkenage idn tht means last idn 5 weniyata tama meka apply wenne*/
+li:nth-last-child(5){
+    color:black;
+}
+
 </style>
 
 <body>
@@ -48,6 +84,21 @@ background: dodgerblue;
     <label for="name">Name</label> <br>
     <input type="text" id="name" name="name" placeholder="Enter your name">
 </form>
+
+
+
+<ul>
+    <li>Java</li>
+    <li>Python</li>
+    <li>Go</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>C#</li>
+</ul>
+
+<ul>
+    <li>Java</li>
+</ul>
 
 
 </body>
