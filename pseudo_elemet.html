@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Element</title>
+
+    <!--Element eke specific part ekakata style eka apply karanna oni unama-->
+
+
+    <style>
+
+        /*content eka issrahata mona hari  danna oninma */
+
+        h1::before {
+            content:"😊";
+        }
+
+    /*    content eke agat amona hari danna oni unma*/
+        h1::after {
+            content:"😊";
+        }
+
+        /*First letter ekata style ekaka add karanna oni unama*/
+
+        h2::first-letter{
+            color:deeppink;
+            font-size:32px;
+        }
+
+        /*para ekaka first line ekata withrak danna oni unama */
+        p::first-line{
+            color:purple;
+            font-weight: bolder;
+        }
+
+
+        /*Text feilder eka athule tiyee default text ekata  style ekeek danna oni unama*/
+        input::placeholder{
+            color:red;
+        }
+
+
+        /*Button ekata colour ekaka danna*/
+        input::file-selector-button{
+           background-color: red;
+        }
+
+
+        /*MIXING PSEUDO CLASS AND PSEUDO ELEMENTS*/
+
+
+
+        /*when hovering these */
+        input::file-selector-button:hover {
+            background-color: green;
+        }
+
+
+        /*meka kelinma okkoma ol and ul tags wlata affect wenoo metana emoji ekaka dala tina nisa okkotama emoji watenoo
+        but like api colour ekak dammoth default ol and ul rd colour wlin enoo*/
+        ::marker {
+            content: "💡";
+        }
+
+
+        /*api text eka highlightkaraddi highlight wenna oni pata meken assign karanna puluwn*/
+        ::selection {
+            background-color: greenyellow;
+            color: white;
+            /*color== text colour*/
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+<h1>Welcome To IJSE</h1>
+
+<h2>Welcome To Home</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ea modi? Accusantium aliquid aut delectus, dolores explicabo harum id illum ipsa laboriosam minus, nam nemo nihil numquam
+    quasi quos voluptatum.</p>
+
+<form>
+    <input type="text" placeholder="Enter your ID">
+
+    <br>
+    <br>
+
+    <input type="file">
+</form>
+
+<ul>
+    <li>Java</li>
+    <li>Python</li>
+    <li>GO</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>C#</li>
+</ul>
+
+
+<ol>
+    <li>Java</li>
+    <li>Python</li>
+    <li>GO</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>C#</li>
+</ol>
+
+
+
+</body>
+</html>
