@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascade</title>
+
+    <style>
+        #btn { /* (0, 1, 0, 0) */
+            color: dodgerblue;
+        }
+
+        .custom-btn { /* (0, 0, 1, 0) */
+            color: green;
+        }
+
+        button { /* (0, 0, 0, 1) */
+            background-color: red;
+        }
+
+
+        /*--------------------------------metanin lokuma element identifier eka so eka tama apply wenne--------------------------------------*/
+
+        h1 { /* (0, 0, 0, 1) */
+            color: red;
+        }
+
+        /*here whe we add the attreibure and class selector we will get the value of (0,0,2,0) but even thought ther ids a
+        2 (0,1,0,0)  is greater than the on ewith 2 we should check the position of tehe largest number*/
+
+        .h1class[name] {
+            /*
+            .h1class = (0, 0, 1, 0) [name] = (0, 0, 1, 0)
+            .h1class + [name] = (0, 0, 1, 0) + (0, 0, 1, 0) = (0, 0, 2, 0)
+            */
+            color: deeppink;
+        }
+
+
+
+        /*-----------------metanida ekama value eka tiyena dekak apply krla ethakota wenne ethakota yatama tina eka tama apply wenne------------*/
+        .h1class { /* (0, 0, 1, 0) */
+            color: orange;
+        }
+
+        [name] { /* (0, 0, 1, 0) */
+            color: mediumpurple;
+        }
+
+
+
+    </style>
+
+        </head>
+<body>
+
+
+<button id="btn" class="custom-btn" style="color: orange;">Click!</button> <!-- (1, 0, 0, 0) -->
+
+<h1 class="h1class" name="hello">Hello!</h1>
+<h1 class="h1class">Welcome!</h1>
+<h1  class="h1class" name="hello">Hi!</h1>
+
+</body>
+
+<!--Cascading is used when you add 2 styles and get confused on what to use first
+this consist of a calculation methosd
+
+
+   * +           (0,0,0,0)
+   div  ::       (0,0,0,1)
+   . : []        (0,0,1,0)
+   #             (0,1,0,0)
+   inline css    (1,0,0,0)
+
+   0.0.1.0  =  10
+
+   0,1,0,0  = 100 -->
+</html>
