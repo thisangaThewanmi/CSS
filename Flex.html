@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+
+    <style>
+        div{
+            height:500px;
+            background: gray;
+            display:flex;
+            /* flex-direction: row;                !*tiyena widihatama tiyenoo*!*/
+            /*flex-direction:column;           !*coloum ekak wage wenoo pahala pahalata adenne*!*/
+            /*flex-direction: column-reverse     coloum eka reverse krla eno like C B A;*/
+           /* flex-direction: row-reverse;       row eka reverse krla pennanoo */
+
+
+           /* justify-content: space-around;    watenam space ekak aran denoo   margin ekka */
+            /*justify-content: space-between;  contenet eka athara witharai ida aran denne margin na*/
+            /*justify-content: right;           mulu content ekama right side ekata move wenawa*/
+        }
+
+        div>div{
+            width: 100px;
+            aspect-ratio: 1/1;
+            border: 1px solid black;
+        }
+
+
+        div>div:first-child{
+            background: pink;
+        }
+
+        div>div:nth-child(2){
+            background: red;
+        }
+
+        div>div:nth-child(3){
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+<div>A</div>
+<div>B</div>
+<div>C</div>
+</div>
+
+</body>
+</html>
+
+
+
+<!--In CSS, display: flex is a property-value pair that applies the CSS Flexible Box Layout to an element, making it a flex container. Flexbox is a layout model that allows you to create more flexible and efficient layouts by distributing space among items in a container and aligning them in multiple ways.
+
+When you set display: flex on an element, it becomes a flex container, and its direct children (known as flex items) automatically become flex items. Here's what display: flex does:
+
+Establishes a Flex Container: The element on which display: flex is applied becomes a flex container. This means its direct children will be treated as flex items.
+
+Flex Items Alignment: By default, flex items will be laid out horizontally in a row. However, you can change the direction using the flex-direction property. Other properties like justify-content and align-items can be used to control the alignment and spacing of flex items within the container.
+
+Flexible Sizing: Flex items within a flex container can be set to grow or shrink to fill available space using the flex-grow and flex-shrink properties. You can also control the initial size of flex items using the flex-basis property.
+
+Automatic Margin Alignment: Flexbox automatically adjusts margins of flex items to maintain proper spacing and alignment according to the layout rules you set.
+
+Responsive Layouts: Flexbox is great for creating responsive layouts, as it allows items to dynamically adjust their size and position based on available space.
+
+In summary, display: flex is a powerful tool for creating flexible layouts in CSS, offering more control and easier alignment than traditional block or inline layout methods.-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex box Exercise</title>
+
+  <style>
+    section{
+      width:100vw;
+      height:500px;
+      border:1px solid black;
+
+      display: flex;
+      justify-content: space-between;
+
+      /*display : flex ekai  justify content ekaii dekama danna ona parent ge natuwa childlage dammata wada na metana parent section nis ekata dnna oni*/
+    }
+
+   section>div{
+      width:200px;
+      height:200px;
+
+      box-shadow: 5px 5px 20px dodgerblue;
+
+
+    }
+
+    section>div:first-child{
+      background: pink;
+    }
+
+    section>div:nth-child(2){
+      background: deeppink;
+      align-self: center;  /*align- self attribute eka use wenne childlata (parentge center ekata,parentge start ekata)*/
+    }
+
+    section>div:nth-child(3){
+      background: red;
+      align-self: end;
+    }
+
+    section>div:nth-child(4){
+      background:yellow;
+      align-self: center;
+    }
+    section>div:nth-child(5){
+      background: blue;
+
+    }
+
+    section>div:last-child{
+      background: orange;
+      align-self: center;
+    }
+
+
+  </style>
+</head>
+<body>
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</section>
+
+</body>
+</html>
