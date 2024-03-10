@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Media Query Exercise</title>
+
+
+    <link rel="stylesheet" href="normalize.css">
+  <style>
+
+
+    section{
+      display:flex;
+      justify-content: space-around;
+      margin:auto;/*meken karanne div 3 madata gannawa */
+     /* width: 800px;*/ /*mekedi sectio ekata certain width eakk dila tiyenoo ekota div 3 watenne 800px athule ita adu unata adi wenne na*/
+    }
+
+    section>div>h3{
+      text-align: center;
+    }
+
+
+
+    section>div{
+      width:200px;
+      aspect-ratio: 1/1;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      text-align: center;
+    }
+
+
+
+    /*-----section 2............*/
+
+    #section2{
+
+        margin: 10px auto;
+        justify-content: space-around;
+        display:grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #section2>div{
+        width:100px;
+        aspect-ratio: 1/1;
+        border:1px solid red;
+        margin: 20px 0px  auto;
+        background-image:url("bicycle.jpeg");
+
+    }
+
+
+    /*-----Media Queries----*/
+
+    @media all and (max-width: 800px) {
+       section{
+           display: block;/*eka yata eka enna hadanooo*/
+
+
+       }
+        section>div{
+            margin: 10px auto;/*madata gannawa*/
+        }
+
+    }
+
+    @media all and (max-width: 800px) {
+        #section2{
+          grid-template-columns: repeat(3, 1fr); /*800px wlata awama grid eke adu karanna*/
+
+        }
+
+        #section2>div {
+            width: 120px;
+            height: 120px;
+            margin: auto;/*madata ganna*/
+        }
+
+    }
+
+    @media all and (max-width: 600px) {
+        #section2{
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        #section2>div {
+            width: 140px;
+            height: 140px;
+        }
+
+    }
+
+
+  </style>
+</head>
+<body>
+
+
+
+<section>
+ <div>
+   <h3>Vision</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem beatae ea error eum fugit incidunt inventore ipsum maxime nisi quaerat sunt tempore, totam. </p>
+ </div>
+
+ <div>
+   <h3>Mission</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem beatae ea error eum fugit incidunt inventore ipsum maxime nisi quaerat sunt tempore, totam. </p>
+ </div>
+
+ <div>
+   <h3>Values</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem beatae ea error eum fugit incidunt inventore ipsum maxime nisi quaerat sunt tempore, totam. </p>
+ </div>
+  </section>
+
+
+
+
+<!--------------------gallery using od the grid layout----------------->
+
+<section id="section2">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+</body>
+</html>
